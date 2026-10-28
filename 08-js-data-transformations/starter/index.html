@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es" data-exercise-id="08-js-data-transformations" data-exercise-title="08 · Transformaciones de datos">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Transformaciones de datos</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Transformaciones de inventario</h1>
+        <p>Implementa las funciones puras de <code>logic.mjs</code> y comprueba los resultados.</p>
+        <p class="todo-note">Tests: <code>npm run test:exercise -- 08</code></p>
+      </section>
+      <section class="exercise-workspace card">
+        <div class="controls">
+          <label class="field">Buscar <input type="search" data-search value="monitor"></label>
+          <label class="field">Ordenar
+            <select data-sort><option value="name">Nombre</option><option value="price">Precio</option><option value="stock">Stock</option></select>
+          </label>
+          <button class="button" type="button" data-run>Ejecutar</button>
+        </div>
+        <p class="status-message" role="status" data-status></p>
+        <pre data-output aria-label="Resultado"></pre>
+      </section>
+    </main>
+  </body>
+</html>

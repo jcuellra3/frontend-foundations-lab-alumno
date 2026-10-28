@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" data-exercise-id="05-css-flexbox-layout" data-exercise-title="05 · Layout con Flexbox">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Layout con Flexbox</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Catalogo de rutas formativas</h1>
+        <p>Utiliza Flexbox para la toolbar, las tarjetas y sus acciones.</p>
+      </section>
+
+      <section class="toolbar card" aria-label="Filtros">
+        <div class="toolbar__filters">
+          <label class="field">Area
+            <select><option>Todas</option><option>Frontend</option><option>Backend</option></select>
+          </label>
+          <label class="field">Nivel
+            <select><option>Todos</option><option>Inicial</option><option>Intermedio</option></select>
+          </label>
+        </div>
+        <button class="button button--secondary" type="button">Limpiar filtros</button>
+      </section>
+
+      <section class="course-list" aria-label="Cursos">
+        <article class="course card">
+          <div><p class="course__tag">HTML</p><h2>Semantica y accesibilidad</h2><p>Landmarks, formularios, tablas y navegacion operable con teclado.</p></div>
+          <div class="course__actions"><span>6 h</span><a class="button" href="#html">Abrir</a></div>
+        </article>
+        <article class="course card">
+          <div><p class="course__tag">JavaScript</p><h2>Asincronia aplicada</h2><p>Promesas, concurrencia, cancelacion y estados de interfaz en peticiones reales. Incluye ejercicios adicionales de depuracion.</p></div>
+          <div class="course__actions"><span>10 h</span><a class="button" href="#js">Abrir</a></div>
+        </article>
+        <article class="course card">
+          <div><p class="course__tag">TypeScript</p><h2>Modelado estricto</h2><p>Uniones, narrowing, genericos y fronteras externas con unknown.</p></div>
+          <div class="course__actions"><span>8 h</span><a class="button" href="#ts">Abrir</a></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

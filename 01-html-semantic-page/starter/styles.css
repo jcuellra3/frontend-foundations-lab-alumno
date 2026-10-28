@@ -1,0 +1,79 @@
+.page {
+  padding-block: 2rem 4rem;
+}
+
+.site-heading,
+.content,
+.footer {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.site-heading,
+.footer {
+  padding: 1rem;
+}
+
+.brand,
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--color-primary);
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+  margin-block: 1rem;
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.metadata {
+  color: var(--color-text-muted);
+}
+
+.fake-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--color-primary);
+  color: white;
+}
+
+.related {
+  padding: 1rem;
+  background: var(--color-surface-muted);
+}
+
+@media (min-width: 48rem) {
+  .site-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  .content {
+    grid-template-columns: minmax(0, 2fr) minmax(14rem, 0.7fr);
+  }
+}

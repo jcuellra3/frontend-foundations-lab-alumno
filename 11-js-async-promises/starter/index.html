@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" data-exercise-id="11-js-async-promises" data-exercise-title="11 · Promesas y concurrencia">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Promesas y concurrencia</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Carga concurrente de dashboard</h1>
+        <p>Ejecuta tres fuentes independientes, tolera resultados parciales y aplica timeout.</p>
+        <p class="todo-note">Tests: <code>npm run test:exercise -- 11</code></p>
+      </section>
+      <section class="exercise-workspace card">
+        <div class="controls">
+          <label><input type="checkbox" data-fail> Simular fallo en actividad</label>
+          <button class="button" type="button" data-run>Cargar dashboard</button>
+        </div>
+        <p class="status-message" role="status" data-status></p>
+        <pre data-output></pre>
+      </section>
+    </main>
+  </body>
+</html>

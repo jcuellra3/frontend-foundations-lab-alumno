@@ -1,0 +1,43 @@
+/* TODO: crea el layout con CSS Grid. */
+.dashboard > * {
+  margin-bottom: 1rem;
+}
+
+.metrics {
+  display: block;
+}
+
+.metric,
+.activity,
+.next {
+  padding: 1.25rem;
+}
+
+.metric {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.metric span,
+.metric small {
+  display: block;
+  color: var(--color-text-muted);
+}
+
+.metric strong {
+  display: block;
+  margin-block: 0.4rem;
+  font-size: 2rem;
+}
+
+.activity {
+  width: 65%;
+  display: inline-block;
+}
+
+.next {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+}

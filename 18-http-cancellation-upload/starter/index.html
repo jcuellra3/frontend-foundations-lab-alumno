@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es" data-exercise-id="18-http-cancellation-upload" data-exercise-title="18 · Debounce, cancelacion y subida">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Cancelacion y upload</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Busqueda cancelable y upload</h1>
+        <p>Combina debounce, AbortController y FormData en dos flujos independientes.</p>
+      </section>
+      <section class="http-layout">
+        <section class="card panel" aria-labelledby="search-title">
+          <h2 id="search-title">Busqueda remota</h2>
+          <label class="field">Producto
+            <input type="search" data-search autocomplete="off" placeholder="Escribe monitor, teclado...">
+          </label>
+          <p class="status-message" role="status" data-search-status></p>
+          <ul class="search-results" data-results></ul>
+        </section>
+
+        <section class="card panel" aria-labelledby="upload-title">
+          <h2 id="upload-title">Subir evidencia</h2>
+          <form data-upload-form>
+            <label class="field">Titulo <input name="title" required></label>
+            <label class="field">Archivo <input name="file" type="file" required></label>
+            <button class="button" type="submit" data-upload-button>Subir</button>
+          </form>
+          <p class="status-message" role="status" data-upload-status></p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

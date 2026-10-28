@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es" data-exercise-id="16-http-fetch-states" data-exercise-title="16 · Fetch y estados de interfaz">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Fetch y estados</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Estados de una peticion</h1>
+        <p>Prueba casos normal, vacio, error y lento desde una unica maquina de estados.</p>
+      </section>
+      <section class="exercise-workspace card">
+        <div class="scenario-controls">
+          <label class="field">Escenario
+            <select data-scenario>
+              <option value="success">Con resultados</option>
+              <option value="empty">Sin resultados</option>
+              <option value="error">Error 500</option>
+              <option value="slow">Respuesta lenta</option>
+            </select>
+          </label>
+          <button class="button" type="button" data-load>Cargar</button>
+        </div>
+
+        <div class="state-panel" data-state aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>

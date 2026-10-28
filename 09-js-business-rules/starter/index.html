@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es" data-exercise-id="09-js-business-rules" data-exercise-title="09 · Reglas de negocio">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Reglas de negocio</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Simulador de venta</h1>
+        <p>La interfaz solo recoge datos. Todas las reglas deben vivir en <code>domain.mjs</code>.</p>
+        <p class="todo-note">Tests: <code>npm run test:exercise -- 09</code></p>
+      </section>
+      <section class="exercise-workspace card">
+        <form data-form class="sale-form">
+          <label class="field">Nombre del producto <input name="name" minlength="3" value="Producto demo" required></label>
+          <label class="field">Precio base <input name="price" type="number" min="0" step="0.01" value="100" required></label>
+          <label class="field">Descuento % <input name="discountPercent" type="number" min="0" max="100" value="10" required></label>
+          <label class="field">Impuesto % <input name="taxPercent" type="number" min="0" max="100" value="21" required></label>
+          <label class="field">Stock actual <input name="stock" type="number" min="0" step="1" value="5" required></label>
+          <label class="field">Cantidad <input name="quantity" type="number" min="1" step="1" value="2" required></label>
+          <button class="button" type="submit">Simular venta</button>
+        </form>
+        <p class="status-message" role="status" data-status></p>
+        <pre data-output></pre>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es" data-exercise-id="15-browser-url-storage" data-exercise-title="15 · URL, History y localStorage">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · URL y storage</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Filtros compartibles</h1>
+        <p>La URL conserva filtros; localStorage conserva la preferencia de vista.</p>
+      </section>
+      <section class="exercise-workspace card">
+        <form data-filters class="filters">
+          <label class="field">Buscar <input name="search" type="search"></label>
+          <label class="field">Categoria
+            <select name="category"><option value="">Todas</option><option>Perifericos</option><option>Monitores</option></select>
+          </label>
+          <label class="field">Orden
+            <select name="sort"><option value="name">Nombre</option><option value="price">Precio</option></select>
+          </label>
+          <button class="button button--secondary" type="reset">Restablecer</button>
+        </form>
+        <fieldset class="view-picker">
+          <legend>Vista</legend>
+          <label><input type="radio" name="view" value="grid"> Rejilla</label>
+          <label><input type="radio" name="view" value="list"> Lista</label>
+        </fieldset>
+        <p class="status-message" role="status" data-status></p>
+        <div class="results" data-results></div>
+      </section>
+    </main>
+  </body>
+</html>

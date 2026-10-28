@@ -1,0 +1,39 @@
+/* TODO: sustituye anchuras y distribuciones rigidas por Flexbox. */
+.toolbar {
+  padding: 1rem;
+}
+
+.toolbar__filters {
+  margin-bottom: 1rem;
+}
+
+.toolbar .field {
+  width: 260px;
+  margin-right: 16px;
+}
+
+.course-list {
+  display: block;
+}
+
+.course {
+  width: 31%;
+  min-height: 360px;
+  margin-right: 2%;
+  margin-bottom: 16px;
+  padding: 1.25rem;
+  float: left;
+}
+
+.course__tag {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.course__actions {
+  margin-top: 80px;
+}
+
+.course__actions .button {
+  float: right;
+}

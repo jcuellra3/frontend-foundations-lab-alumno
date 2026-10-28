@@ -1,0 +1,27 @@
+.registration-form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 42rem;
+}
+
+.options {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.options p {
+  margin: 0;
+  font-weight: 750;
+}
+
+.fake-submit {
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: white;
+  font-weight: 750;
+}

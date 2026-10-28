@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es" data-exercise-id="10-js-modules-errors" data-exercise-title="10 · Modulos y errores">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Modulos y errores</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Busqueda con errores de dominio</h1>
+        <p>Separa validacion, servicio y presentacion en modulos.</p>
+        <p class="todo-note">Tests: <code>npm run test:exercise -- 10</code></p>
+      </section>
+      <section class="exercise-workspace card">
+        <form data-form class="lookup-form">
+          <label class="field">Identificador
+            <input name="id" value="prd-001" required>
+          </label>
+          <label class="field">Escenario
+            <select name="scenario"><option value="valid">Datos validos</option><option value="invalid">Datos invalidos</option><option value="missing">No encontrado</option></select>
+          </label>
+          <button class="button" type="submit">Buscar</button>
+        </form>
+        <p class="status-message" role="status" data-status></p>
+        <pre data-output></pre>
+      </section>
+    </main>
+  </body>
+</html>

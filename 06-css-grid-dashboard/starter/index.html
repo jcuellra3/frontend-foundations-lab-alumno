@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" data-exercise-id="06-css-grid-dashboard" data-exercise-title="06 · Dashboard con CSS Grid">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Dashboard Grid</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Dashboard de formacion</h1>
+        <p>Compone los paneles con Grid y conserva el orden logico del documento.</p>
+      </section>
+
+      <section class="dashboard" aria-label="Resumen del programa">
+        <div class="metrics">
+          <article class="metric card"><span>Participantes</span><strong>42</strong><small>+6 este mes</small></article>
+          <article class="metric card"><span>Completados</span><strong>68 %</strong><small>Objetivo: 75 %</small></article>
+          <article class="metric card"><span>Bloqueos</span><strong>5</strong><small>2 requieren apoyo</small></article>
+        </div>
+
+        <article class="activity card">
+          <h2>Actividad reciente</h2>
+          <ol>
+            <li><strong>Lucia</strong> completo Fetch y estados de interfaz.</li>
+            <li><strong>Hugo</strong> solicito revision de TypeScript.</li>
+            <li><strong>Elena</strong> inicio el capstone.</li>
+            <li><strong>Marcos</strong> corrigio la navegacion por teclado.</li>
+          </ol>
+        </article>
+
+        <aside class="next card" aria-labelledby="next-title">
+          <h2 id="next-title">Proximos checkpoints</h2>
+          <ul>
+            <li><time datetime="2026-10-09">9 oct</time> · HTML/CSS</li>
+            <li><time datetime="2026-10-14">14 oct</time> · JavaScript</li>
+            <li><time datetime="2026-10-21">21 oct</time> · Capstone</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

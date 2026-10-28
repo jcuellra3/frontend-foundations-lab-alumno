@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es" data-exercise-id="13-dom-event-delegation" data-exercise-title="13 · Eventos y delegacion">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Delegacion de eventos</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Checklist del capstone</h1>
+        <p>Gestiona una lista dinamica mediante delegacion de eventos.</p>
+      </section>
+      <section class="exercise-workspace card task-app">
+        <form data-form class="task-form">
+          <label class="field">Nueva tarea <input name="title" minlength="3" required></label>
+          <button class="button" type="submit">Añadir</button>
+        </form>
+        <p class="status-message" role="status" data-status></p>
+        <ul class="task-list" data-list></ul>
+      </section>
+    </main>
+  </body>
+</html>

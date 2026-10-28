@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es" data-exercise-id="14-dom-native-forms" data-exercise-title="14 · Formularios nativos y FormData">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Formularios nativos</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Alta de producto</h1>
+        <p>Combina validacion nativa, mensajes propios y lectura con FormData.</p>
+      </section>
+      <section class="exercise-workspace card form-layout">
+        <form data-form novalidate>
+          <div class="field">
+            <label for="product-name">Nombre</label>
+            <input id="product-name" name="name" minlength="3" required aria-describedby="name-error">
+            <p class="field__error" id="name-error" data-error-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="category">Categoria</label>
+            <select id="category" name="category" required aria-describedby="category-error">
+              <option value="">Selecciona</option><option>Perifericos</option><option>Monitores</option><option>Audio</option>
+            </select>
+            <p class="field__error" id="category-error" data-error-for="category"></p>
+          </div>
+          <div class="field">
+            <label for="price">Precio</label>
+            <input id="price" name="price" type="number" min="0" step="0.01" required aria-describedby="price-error">
+            <p class="field__error" id="price-error" data-error-for="price"></p>
+          </div>
+          <div class="field">
+            <label for="stock">Stock</label>
+            <input id="stock" name="stock" type="number" min="0" step="1" required aria-describedby="stock-error">
+            <p class="field__error" id="stock-error" data-error-for="stock"></p>
+          </div>
+          <label class="checkbox"><input name="featured" type="checkbox"> Producto destacado</label>
+          <button class="button" type="submit">Añadir producto</button>
+        </form>
+        <section aria-labelledby="created-title">
+          <h2 id="created-title">Productos creados</h2>
+          <p class="status-message" role="status" data-status></p>
+          <ul data-list></ul>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

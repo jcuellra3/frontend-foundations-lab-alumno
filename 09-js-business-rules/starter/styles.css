@@ -1,0 +1,27 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-3);
+}
+
+.controls .field {
+  flex: 1 1 12rem;
+}
+
+pre {
+  min-height: 14rem;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: #0d1422;
+  color: #d9e4ff;
+  white-space: pre-wrap;
+}
+
+.sale-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  align-items: end;
+  gap: var(--space-3);
+}

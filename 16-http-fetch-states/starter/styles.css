@@ -1,0 +1,54 @@
+.scenario-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.scenario-controls .field {
+  flex: 1 1 16rem;
+}
+
+.state-panel {
+  min-height: 16rem;
+}
+
+.state-message {
+  display: grid;
+  min-height: 14rem;
+  place-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.state-message > * { margin: 0; }
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-3);
+}
+
+.product-card {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.product-card > * { margin: 0; }
+.product-card p { margin-top: var(--space-2); color: var(--color-text-muted); }
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  margin-inline: auto;
+  border: 0.25rem solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+@keyframes spin { to { transform: rotate(1turn); } }

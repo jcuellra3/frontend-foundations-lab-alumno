@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" data-exercise-id="12-dom-safe-rendering" data-exercise-title="12 · Renderizado DOM seguro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Renderizado DOM seguro</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Catalogo seguro</h1>
+        <p>Renderiza los datos sin interpretar contenido externo como HTML.</p>
+      </section>
+      <section class="exercise-workspace card">
+        <div class="toolbar">
+          <button class="button" type="button" data-load>Mostrar productos</button>
+          <button class="button button--secondary" type="button" data-empty>Mostrar vacio</button>
+          <button class="button button--secondary" type="button" data-untrusted>Dato no confiable</button>
+        </div>
+        <p class="status-message" role="status" data-status></p>
+        <div class="product-grid" data-products></div>
+      </section>
+    </main>
+  </body>
+</html>

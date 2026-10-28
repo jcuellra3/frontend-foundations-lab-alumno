@@ -1,0 +1,53 @@
+/* TODO: empieza por movil y añade responsive, estados y reduced motion. */
+.responsive-layout {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+}
+
+.summary,
+.form-panel {
+  padding: 32px;
+}
+
+.summary h1 {
+  font-size: 48px;
+}
+
+.summary__eyebrow {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.responsive-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+.validation-hint {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.button {
+  transition: transform 300ms ease;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}

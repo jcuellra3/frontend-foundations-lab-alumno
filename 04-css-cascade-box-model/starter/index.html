@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es" data-exercise-id="04-css-cascade-box-model" data-exercise-title="04 · Cascada y box model">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Cascada y box model</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Planes de formacion</h1>
+        <p>Corrige el layout sin aumentar especificidad ni ocultar el overflow.</p>
+      </section>
+      <section class="pricing" aria-label="Planes disponibles">
+        <article class="plan">
+          <p class="plan__eyebrow">Fundamentos</p>
+          <h2>Base web</h2>
+          <p>HTML, CSS y JavaScript con practicas guiadas.</p>
+          <p class="plan__price">40 horas</p>
+          <a class="plan__action" href="#base">Ver contenido</a>
+        </article>
+        <article class="plan plan--featured">
+          <p class="plan__eyebrow">Recomendado</p>
+          <h2>Base + Angular</h2>
+          <p>Fundamentos, TypeScript y proyecto Angular completo.</p>
+          <p class="plan__price">80 horas</p>
+          <a class="plan__action" href="#angular">Ver contenido</a>
+        </article>
+        <article class="plan">
+          <p class="plan__eyebrow">Acompañamiento</p>
+          <h2>Base + mentoría</h2>
+          <p>Fundamentos, revisiones de código y sesiones de apoyo para consolidar el aprendizaje.</p>
+          <p class="plan__price">60 horas</p>
+          <a class="plan__action" href="#mentoria">Ver contenido</a>
+        </article>
+      </section>
+      <p class="notice">Los tiempos son orientativos y se adaptan al diagnostico inicial.</p>
+    </main>
+  </body>
+</html>

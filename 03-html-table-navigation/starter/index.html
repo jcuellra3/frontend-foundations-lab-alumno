@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es" data-exercise-id="03-html-table-navigation" data-exercise-title="03 · Tabla de datos y navegacion">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Tabla de datos</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <!-- TODO: añade skip link -->
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Inventario</h1>
+        <p>Convierte este listado visual en una tabla de datos accesible.</p>
+      </section>
+
+      <section class="exercise-workspace card">
+        <div class="data-grid" id="inventory">
+          <div class="row row--header">
+            <span>Producto</span><span>Categoria</span><span>Stock</span><span>Estado</span><span>Accion</span>
+          </div>
+          <div class="row">
+            <span>Teclado mecanico</span><span>Perifericos</span><span>18</span><span class="status status--ok">●</span><span>Editar</span>
+          </div>
+          <div class="row">
+            <span>Monitor 27 pulgadas</span><span>Monitores</span><span>2</span><span class="status status--warning">●</span><span>Editar</span>
+          </div>
+          <div class="row">
+            <span>Webcam Full HD</span><span>Video</span><span>0</span><span class="status status--danger">●</span><span>Editar</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es" data-exercise-id="07-css-responsive-form" data-exercise-title="07 · Responsive y estados de formulario">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter · Formulario responsive</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="responsive-layout">
+        <aside class="summary card" aria-labelledby="summary-title">
+          <p class="summary__eyebrow">Inscripcion</p>
+          <h1 id="summary-title">Reserva tu plaza</h1>
+          <p>Completa tus datos. Recibiras una confirmacion por correo y el enlace al diagnostico inicial.</p>
+          <ul><li>Duracion: 4 semanas</li><li>Modalidad: online</li><li>Checkpoint semanal</li></ul>
+        </aside>
+
+        <section class="form-panel card" aria-labelledby="form-title">
+          <h2 id="form-title">Datos de la persona participante</h2>
+          <form class="responsive-form">
+            <div class="field field--full">
+              <label for="name">Nombre completo</label>
+              <input id="name" name="name" minlength="3" placeholder=" " required>
+              <span class="validation-hint">Minimo 3 caracteres.</span>
+            </div>
+            <div class="field">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" placeholder=" " required>
+              <span class="validation-hint">Introduce un correo valido.</span>
+            </div>
+            <div class="field">
+              <label for="hours">Horas disponibles por semana</label>
+              <input id="hours" name="hours" type="number" min="2" max="20" placeholder=" " required>
+              <span class="validation-hint">Entre 2 y 20 horas.</span>
+            </div>
+            <div class="field field--full">
+              <label for="notes">Necesidades de adaptacion</label>
+              <textarea id="notes" name="notes"></textarea>
+            </div>
+            <button class="button field--full" type="submit">Enviar inscripcion</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
