@@ -20,19 +20,53 @@ function render() {
       <button type="button" data-action="delete">×</button>
     `;
     item.querySelector('.task-item__title').textContent = task.title;
+    item.querySelector('[data-action="toggle"]').setAttribute(
+      'aria-label',
+      `${task.completed ? 'Marcar' : 'Completar'} "${task.title}"`,
+    );
+    item.querySelector('[data-action="delete"]').setAttribute(
+      'aria-label',
+      `Eliminar "${task.title}"`,
+    );
     list.append(item);
-
-    // TODO: elimina listeners por item y delega en la lista.
-    item.querySelector('[data-action="delete"]').addEventListener('click', () => {
-      tasks = tasks.filter((candidate) => candidate.id !== task.id);
-      render();
-    });
   }
 }
 
+list.addEventListener('click', (event) => {
+  const actionButton = event.target.closest('button[data-action]');
+  const item = actionButton?.closest('[data-task-id]');
+  if (!item || !list.contains(actionButton)) return;
+
+  const task = tasks.find((candidate) => candidate.id === item.dataset.taskId);
+  if (!task) return;
+
+  if (actionButton.dataset.action === 'toggle') {
+    task.completed = !task.completed;
+  } else if (actionButton.dataset.action === 'delete') {
+    tasks = tasks.filter((candidate) => candidate.id !== task.id);
+  } else {
+    return;
+  }
+
+  render();
+});
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  // TODO: crear tarea, limpiar formulario y anunciar resultado.
+  const titleInput = form.elements.title;
+  const title = titleInput.value.trim();
+
+  if (!title) return;
+
+  tasks.push({
+    id: String(Date.now()),
+    title,
+    completed: false
+  });
+
+  titleInput.value = '';
+  status.textContent = `Tarea "${title}" creada`;
+  render();
 });
 
 render();
