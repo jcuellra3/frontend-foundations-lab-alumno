@@ -8,16 +8,37 @@ const container = document.querySelector('[data-products]');
 const status = document.querySelector('[data-status]');
 
 export function createProductCard(product) {
-  // TODO: no utilices innerHTML con product.
+  //Se crea la carpeta contenedora.
   const article = document.createElement('article');
   article.className = 'product-card';
-  article.textContent = product.name;
+
+  //Se crea el título como <h2>.
+  const title = document.createElement('h2');
+  title.textContent = product.name;
+  article.append(title);
+
+  if (product.stock <= 2) {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = product.stock === 0 ? 'Sin stock' : 'Stock bajo';
+    article.append(badge);
+  }
   return article;
 }
 
 export function renderProducts(target, items) {
-  // TODO: reemplaza el contenido anterior y representa empty state.
-  for (const item of items) target.append(createProductCard(item));
+  if (!items || items.length === 0) {
+    const emptyMessage = document.createElement('p');
+    emptyMessage.textContent = 'No hay productos disponibles.';
+    target.replaceChildren(emptyMessage);
+    return;
+  }
+  const fragment = document.createDocumentFragment();
+  for (const item of items) {
+    const card = createProductCard(item);
+    fragment.append(card);
+  }
+  target.replaceChildren(fragment);
 }
 
 document.querySelector('[data-load]').addEventListener('click', () => {
