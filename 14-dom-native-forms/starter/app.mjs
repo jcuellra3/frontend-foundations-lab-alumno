@@ -9,9 +9,9 @@ function clearErrors() {
     if (element.willValidate) {
       element.removeAttribute('aria-invalid');
       const errorId = element.getAttribute('aria-describedby');
-      const errorEl = errorId ? document.getElementById(errorId) : null;
-      if (errorEl) {
-        errorEl.textContent = '';
+      const errorElement = errorId ? document.getElementById(errorId) : null;
+      if (errorElement) {
+        errorElement.textContent = '';
       }
     }
   }
@@ -24,9 +24,9 @@ function showValidationErrors() {
     if (element.willValidate && !element.checkValidity()) {
       element.setAttribute('aria-invalid', 'true');
       const errorId = element.getAttribute('aria-describedby');
-      const errorEl = errorId ? document.getElementById(errorId) : null;
-      if (errorEl) {
-        errorEl.textContent = element.validationMessage;
+      const errorElement = errorId ? document.getElementById(errorId) : null;
+      if (errorElement) {
+        errorElement.textContent = element.validationMessage;
       }
       if (!firstInvalid) {
         firstInvalid = element;
