@@ -7,26 +7,47 @@ export interface Product {
   readonly createdAt: string;
 }
 
-// TODO: deriva los DTOs con utility types.
-export type ProductCreate = Product;
-export type ProductPatch = Product;
-export type ProductCardView = Product;
+//DTOs derivados con utility types
+export type ProductCreate = Omit<Product, 'id' | 'createdAt'>;
+export type ProductPatch = Partial<ProductCreate>;
+export type ProductCardView = Pick<Product, 'id' | 'name' | 'price' | 'stock'>;
 
-// TODO: sustituye flags por una union discriminada.
-export interface LoadState<T> {
-  loading: boolean;
-  data?: T;
-  error?: string;
+//Unión discriminada para evitar estados imposibles
+export type LoadState<T> =
+  | { status: 'idle' }
+  | { status: 'loading' }
+  | { status: 'success'; data: T }
+  | { status: 'error'; error: string };
+
+//Transforma solo el estado 'success' y mantiene el resto igual
+export function mapState<T, R>(
+  state: LoadState<T>,
+  mapper: (value: T) => R,
+): LoadState<R> {
+  if (state.status === 'success') {
+    return {
+      status: 'success',
+      data: mapper(state.data),
+    };
+  }
+
+  return state;
 }
 
-export function mapState<T, R>(state: LoadState<T>, mapper: (value: T) => R): LoadState<R> {
-  // TODO
-  return state as unknown as LoadState<R>;
-}
-
+//Render exhaustivo comprobando todas las variantes con 'never'
 export function stateLabel<T>(state: LoadState<T>): string {
-  // TODO
-  if (state.loading) return 'Cargando';
-  if (state.error) return state.error;
-  return state.data ? 'Completado' : 'Inactivo';
+  switch (state.status) {
+    case 'idle':
+      return 'Inactivo';
+    case 'loading':
+      return 'Cargando';
+    case 'success':
+      return 'Completado';
+    case 'error':
+      return state.error;
+    default: {
+      const exhaustiveCheck: never = state;
+      return exhaustiveCheck;
+    }
+  }
 }
