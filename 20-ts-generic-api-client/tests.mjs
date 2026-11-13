@@ -50,6 +50,17 @@ test('requestJson conserva el status de un error HTTP', async () => {
   );
 });
 
+test('requestJson convierte los rechazos del parser en errores de contrato', async () => {
+  const cause = new Error('Formato invalido');
+  await assert.rejects(
+    api.requestJson('/products', {
+      parser: () => { throw cause; },
+      fetcher: async () => response({ body: {} })
+    }),
+    (error) => error.name === 'ApiContractError' && error.cause === cause
+  );
+});
+
 test('parsePage compone el parser de cada item', () => {
   const parser = api.parsePage(product.parseProduct);
   assert.deepEqual(parser({

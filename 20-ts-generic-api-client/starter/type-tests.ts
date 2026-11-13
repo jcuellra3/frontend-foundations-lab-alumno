@@ -14,5 +14,10 @@ async function check(): Promise<void> {
   // @ts-expect-error El parser de Product no produce string.
   const text: string = product;
   void text;
+
+  // @ts-expect-error Los items de Page son de solo lectura.
+  page.items.push(product);
+  // @ts-expect-error Los metadatos de Page son de solo lectura.
+  page.meta.page = 2;
 }
 void check;
